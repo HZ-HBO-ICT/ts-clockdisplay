@@ -16,6 +16,14 @@ export default class NumberDisplay {
     return this.value;
   }
 
+  /**
+   * Returns a string representing the display value of this NumberDisplay
+   *
+   * @returns a string representing the display value of this NumberDisplay
+   */
+  public getDisplayValue(): string {
+    return this.value.toString().padStart(2, '0');
+  }
 
   /**
    * Increment the value. If the value reaches the limit, go to back to zero.

@@ -16,7 +16,6 @@ export default class ClockDisplay {
     this.seconds = new NumberDisplay(60);
   }
 
-
   /**
    * Start by incrementing the seconds. If the seconds has been set back to zero (by the limit)
    * increment the minutes. If the minutes have been set back to zero, increment the hours.
@@ -34,6 +33,7 @@ export default class ClockDisplay {
 
   /**
    * Update the individual parts of the clock and then update the display.
+   *
    * @param hours The hours
    * @param minutes The minutes
    * @param seconds The seconds
@@ -49,6 +49,9 @@ export default class ClockDisplay {
    * Update the inner text of the HTML div element
    */
   private updateDisplay(): void {
-    this.display.innerText = `${this.hours.getValue().toString().padStart(2, '0')}:${this.minutes.getValue().toString().padStart(2,'0')}:${this.seconds.getValue().toString().padStart(2,'0')}`;
+    const hours = this.hours.getDisplayValue();
+    const minutes = this.minutes.getDisplayValue();
+    const seconds = this.seconds.getDisplayValue();
+    this.display.innerText = `${hours}:${minutes}:${seconds}`;
   }
 }
