@@ -38,7 +38,7 @@ export default class ClockDisplay {
    * @param minutes The minutes
    * @param seconds The seconds
    */
-  public setTime(hours: number, minutes: number, seconds: number) {
+  public setTime(hours: number, minutes: number, seconds: number): void {
     this.hours.setValue(hours);
     this.minutes.setValue(minutes);
     this.seconds.setValue(seconds);

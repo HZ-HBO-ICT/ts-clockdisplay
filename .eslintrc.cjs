@@ -4,7 +4,8 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
-    'jsdoc'
+    'jsdoc',
+    'filenames'
   ],
   extends: [
     'airbnb-base',
@@ -19,9 +20,17 @@ module.exports = {
     'camelcase': 'off',
     'no-console': 'off',
     'linebreak-style': 'off',
-    'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
+    'no-empty': 'warn',
+    'no-multiple-empty-lines': 'warn',
+    'max-len': 'warn',
+    'filenames/match-exported': 'error',
+    'no-plusplus': ["warn", { "allowForLoopAfterthoughts": true }],
+    'no-trailing-spaces': ["warn", { "ignoreComments": true }],
+    'radix': ["warn", "as-needed"],
+    'padded-blocks': "warn",
+    'jsdoc/tag-lines': 'off',
     'jsdoc/require-jsdoc': [
-      'error',
+      'warn',
       {
         'publicOnly': true,
         'checkConstructors': false,
@@ -49,10 +58,12 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/naming-convention': [
-      'error',
+      'warn',
       {
         'selector': 'default',
         'format': ['camelCase']
@@ -63,7 +74,8 @@ module.exports = {
       },
       {
         'selector': 'classProperty',
-        'format': ['camelCase', 'UPPER_CASE']
+        'format': ['camelCase', 'UPPER_CASE'],
+        'leadingUnderscore': 'allow'
       },
       {
         'selector': 'parameter',
@@ -74,6 +86,10 @@ module.exports = {
         'selector': 'memberLike',
         'modifiers': ['private'],
         'format': ['camelCase']
+      },
+      {
+        'selector': 'import',
+        'format': ['camelCase', 'PascalCase'],
       },
       {
         'selector': 'typeLike',
