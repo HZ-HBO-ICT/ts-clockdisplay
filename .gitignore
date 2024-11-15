@@ -152,7 +152,7 @@ typings/
 *.box
 
 ### VisualStudioCode ###
-.vscode/*
+# .vscode/*
 
 ### Windows ###
 # Windows thumbnail cache files

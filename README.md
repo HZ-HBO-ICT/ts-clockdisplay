@@ -7,9 +7,9 @@ When you look at a clock, you see many parts working together. The body of the c
 ## Instructions
 You are given a ClockDisplay that does not do much.
 
-On the main page of your ClockDisplay, you should be able to set the time, or hours, minutes, seconds, individually.
+On the main page of your ClockDisplay, you should be able to set the time (hours, minutes, and seconds individually).
 
-You should also be able to get the clock to tick over to the next seconds. Once the seconds reach 60, the minutes should tick over, etc.
+You should also make the clock to tick over to the next second. Once the seconds reach 60, the minutes should tick over, etc.
 
 
 ## Class Diagram

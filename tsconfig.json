@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
-        "target": "es2022",
-        "strict": false,
+        "target": "ESNext",
+        "strict": true,
         "sourceMap": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true,
         "noImplicitOverride": true,
         "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
         "removeComments": true,
         "outDir": "build/",
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "moduleResolution": "node",
     },
     "include": [
         "src/**/*"
