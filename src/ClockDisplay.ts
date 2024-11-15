@@ -49,9 +49,9 @@ export default class ClockDisplay {
    * Update the inner text of the HTML div element
    */
   private updateDisplay(): void {
-    const hours = this.hours.getDisplayValue();
-    const minutes = this.minutes.getDisplayValue();
-    const seconds = this.seconds.getDisplayValue();
+    const hours: string = this.hours.getDisplayValue();
+    const minutes: string = this.minutes.getDisplayValue();
+    const seconds: string = this.seconds.getDisplayValue();
     this.display.innerText = `${hours}:${minutes}:${seconds}`;
   }
 }
