@@ -9,7 +9,9 @@ export default class NumberDisplay {
   }
 
   public setValue(newValue: number): void {
-    this.value = newValue;
+    if (!isNaN(newValue)) {
+      this.value = newValue;
+    }
   }
 
   public getValue(): number {

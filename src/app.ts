@@ -8,12 +8,9 @@ window.addEventListener('load', () => {
 
   // Add the click listener for set Time
   document.getElementById('setTime')?.addEventListener('click', () => {
-    const hoursInput: HTMLInputElement = document.getElementById('hours') as HTMLInputElement;
-    const hours: number = Number.parseInt(hoursInput.value);
-    const minutesInput: HTMLInputElement = document.getElementById('minutes') as HTMLInputElement;
-    const minutes: number = Number.parseInt(minutesInput.value);
-    const secondsInput: HTMLInputElement = document.getElementById('seconds') as HTMLInputElement;
-    const seconds: number = Number.parseInt(secondsInput.value);
+    const hours: number = getValueFromInput('hours');
+    const minutes: number = getValueFromInput('minutes');
+    const seconds: number = getValueFromInput('seconds');
 
     myDisplay.setTime(hours, minutes, seconds);
   });
@@ -23,3 +20,13 @@ window.addEventListener('load', () => {
     myDisplay.timeTick();
   });
 });
+
+/**
+ *
+ * @param inputId Id of HTML Input element
+ * @returns number value of the input element
+ */
+function getValueFromInput(inputId: string): number {
+  const input: HTMLInputElement = document.getElementById(inputId) as HTMLInputElement;
+  return Number.parseInt(input.value);
+}
