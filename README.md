@@ -13,6 +13,17 @@ You should also make the clock to tick over to the next second. Once the seconds
 
 
 ## Class Diagram
-![ClockDisplay Class](clock-class.png)
+![ClockDisplay Class](docs/clock-class.png)
+
+## Sequence Diagrams
+
+### Loading the ClockDisplay
+![Loading the ClockDisplay](docs/sd-load.svg)
+
+### Setting the Time
+![Setting the Time](docs/sd-settime.svg)
+
+### Ticking the Clock
+![Ticking the Clock](docs/sd-tick.svg)
 
 > *Bzzzt!* You thought you were awake.
