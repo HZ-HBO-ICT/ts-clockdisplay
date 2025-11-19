@@ -1,16 +1,27 @@
 window.addEventListener('load', () => {
+  // Create a new ClockDisplay, and pass the DIV element through
+
+  // Add the click listener for set Time
   document.getElementById('setTime')?.addEventListener('click', () => {
-    const hoursInput: HTMLInputElement = document.getElementById('hours') as HTMLInputElement;
-    const hours: number = Number.parseInt(hoursInput.value);
-    const minutesInput: HTMLInputElement = document.getElementById('minutes') as HTMLInputElement;
-    const minutes: number = Number.parseInt(minutesInput.value);
-    const secondsInput: HTMLInputElement = document.getElementById('seconds') as HTMLInputElement;
-    const seconds: number = Number.parseInt(secondsInput.value);
+    const hours: number = getValueFromInput('hours');
+    const minutes: number = getValueFromInput('minutes');
+    const seconds: number = getValueFromInput('seconds');
 
     alert(`${hours}:${minutes}:${seconds}`);
   });
 
+  // Tick the time
   document.getElementById('tick')?.addEventListener('click', () => {
-    alert('tick');
+    alert('Tick');
   });
 });
+
+/**
+ *
+ * @param inputId Id of HTML Input element
+ * @returns number value of the input element
+ */
+function getValueFromInput(inputId: string): number {
+  const input: HTMLInputElement = document.getElementById(inputId) as HTMLInputElement;
+  return Number.parseInt(input.value);
+}
